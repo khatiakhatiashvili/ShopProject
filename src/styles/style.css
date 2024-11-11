@@ -1,0 +1,46 @@
+  /* Shop link style */
+  .shop-link {  
+    transition: color 1.5s ease, transform 1.5s ease; 
+  }  
+  .shop-link:hover {
+    color: #8f330a; 
+    transform: scale(1.2);  
+  } 
+
+   
+  /* Image container style */
+  .image-container {  
+    width: 100%;
+    height: 100%;
+  }  
+  .rocket-image {
+    transition: transform 1.3s ease; 
+  }  
+  /* Hover effect for the image */
+  .image-container:hover .rocket-image {
+    transform: scale(1.1); 
+  }
+  
+ .filter-image{
+    transition: transform 1.3s ease; 
+ }
+ .image-container:hover .filter-image{
+    transform:  rotate(0.03turn);
+  }
+  
+  .blog-image{
+    transition: transform 1.3s ease; 
+ }
+ .image-container:hover .blog-image{
+    transform: scale(1.1); 
+    /* transform:translate(30px, 20px) rotate(5deg); */
+  }
+
+
+  .top-image{
+    transition: transform 1.3s ease; 
+ }
+ .image-container:hover .top-image{
+    transform: scale(1.2); 
+    /* transform:translate(30px, 20px) rotate(5deg); */
+  }

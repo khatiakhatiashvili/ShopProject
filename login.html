@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./src/styles/style.css" />
+</head>
+<body>
+  <!-- Include Header -->
+  <div id="header-container"></div>
+
+<section class="h-[316px] w-full">
+        <div class=" flex  flex-col items-center m-auto pt-[70px] text-center bg-cover bg-center bg-[url('./src/img/Shop/Rectangle.svg')] h-full w-full ">    
+            <div class="flex  flex-col items-center">  
+                <img class="h-[78px] w-auto "  src="./src/img/Common/logo.svg" alt="logo">
+                <p class="text-[48px] font-bold text-[#000000]">My Account</p>
+
+            </div>
+            <div class="flex items-center gap-x-2">  
+          <a href="index.html"> <p class="text-[16px] font-medium text-[#000000]">Home</p></a> 
+            <img class="h-[20px] w-auto" src="./src/img/Shop/dashicon.svg" alt="dashicon">        
+            <p class="text-[16px] text-[#000000]">My Account</p>
+        </div>
+    </div>
+  </section>
+  <section class="bg-[#ffffff] pb-6 m-auto">
+    <div class="max-w-7xl lg:flex lg:justify-around m-auto items-center pt-[44px]  gap-y-5">
+        <div >   
+              <p class="text-[36px] font-semibold text-[#000000]">Log In</p>          
+               <form action="" class="flex flex-col gap-y-5 mt-6 m-auto">
+                  <div class="w-[423px] flex flex-col gap-y-3">
+                        <label for="fname" class="text-[16px] font-medium text-[#000000]">Username or email address</label>
+                         <input type="text" id="fname" name="fname" value="" class="border-[1px] border-[#9F9F9F] h-[64px] w-full  rounded-[10px] items-center p-3">
+                   </div>
+                    <div class="w-[423px] flex flex-col gap-y-3">
+                        <label for="fpass" class="text-[16px] font-medium text-[#000000]">Password</label>
+                         <input type="text" id="fpass" name="fpass" value="" class="border-[1px] border-[#9F9F9F] h-[64px] w-full rounded-[10px] items-center p-3">
+                    </div>                 
+                     <div class="w-[423px] flex  gap-x-3">
+                         <input type="checkbox" id="RememberMe" name="RememberMe" value="" class="border-[1px]  border-[#9F9F9F] rounded-[5px] ">
+                         <label for="RememberMe" class="text-[16px] font-regular text-[#000000]"> Remember me</label>
+                      </div>
+                      <div class="w-[423px] flex  gap-x-3 items-center">
+                         <input type="submit" value="Log In" class="border-[1px]  border-[#9F9F9F] h-[64px] w-[40%] rounded-[15px] items-center p-1">
+                         <a href="#"><p class="text-[16px] font-light text-[#000000]"> Lost Your Password?</p></a>
+                      </div>               
+               </form>       
+        </div>
+        <div >     
+            <p class="text-[36px] font-semibold text-[#000000]">Register</p>          
+            <form action="" class="flex flex-col gap-y-8 mt-6">
+                <div class="w-[423px] flex flex-col gap-y-3">
+                        <label for="fname" class="text-[16px] font-medium text-[#000000]">Email address</label>
+                        <input type="text" id="fname" name="fname" value="" class="border-[1px]  border-[#9F9F9F] h-[64px] w-full rounded-[10px] items-center p-3">
+                    </div>
+                    <div class="w-[423px] flex flex-col gap-y-3">
+                        <p class="text-[16px] font-light text-[#000000]">A link to set a new password will be sent to your email address.</p>
+                        <p class="text-[16px] font-light text-[#000000] w-full">Your personal data will be used to support your experience throughout this website, 
+                            to manage access to your account, and for other purposes described in our privacy policy.</p>
+                    </div>                
+                    <div class="w-[423px] flex  items-center">
+                        <input type="submit" value="Register" class="border-[1px]  border-[#9F9F9F] h-[64px] w-[40%] rounded-[15px] items-center p-1">                   
+                    </div>               
+            </form>       
+        </div>
+    </div>
+  </section> 
+
+<section class=" mb-[60px] lg:h-[350px] bg-[#FAF4F4]">
+  <div class="max-w-7xl flex  flex-col items-center m-auto ">   
+  <div class="flex place-content-around  lg:pt-[90px] sm:pt-[20px] md:pt-[20px] flex-wrap text-center gap-x-5 sm:gap-y-7">      
+    <div class="w-[394px] text-center flex flex-col items-start  gap-y-1 ">       
+      <p class="lg:text-[32px] sm:text-[20px] md:text-[20px]  font-medium text-[#000000]">Free Delivery</p>
+      <p class="lg:text-[20px] sm:text-[10px] md:text-[12px]  font-medium text-[#9F9F9F]">For all oders over $50, consectetur <br> adipim scing elit.</p> 
+    </div>
+    <div class="w-[394px] text-center flex flex-col items-start gap-y-1 ">       
+      <p class="lg:text-[32px] sm:text-[20px] md:txt-[20px]  font-medium text-[#000000]">90 Days Return</p>
+      <p class="lg:text-[20px] sm:text-[10px]  md:text-[12px]  font-medium text-[#9F9F9F]">If goods have problems, consectetur <br> adipim scing elit.</p> 
+    </div>
+    <div class="w-[394px] text-center flex flex-col items-start gap-y-1 ">       
+      <p class="lg:text-[32px] sm:text-[20px] md:text-[20px]  font-medium text-[#000000]">Secure Payment</p>
+      <p class="lg:text-[20px]  sm:text-[10px]  md:text-[12px]  font-medium text-[#9F9F9F]">100% secure payment, consectetur <br> adipim scing elit.</p> 
+  </div>    
+</div>
+</section>
+<!-- Include Footer -->
+<div id="footer-container"></div>
+</body>
+
+<script>
+ // Function to load HTML content dynamically
+ function loadHTML(elementId, url) {
+    fetch(url)
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById(elementId).innerHTML = html;
+      })
+      .catch(error => {
+        console.error('Error loading the HTML file:', error);
+      });
+  }
+
+  // Load the header and footer
+  // loadHTML('header-container', 'header.html');
+  loadHTML('footer-container', 'footer.html');
+
+// // Get   button and the mobile menu
+// const menuToggle = document.getElementById('menu-toggle');
+// const mobileMenu = document.getElementById('mobile-menu');
+
+// // Add event listener to toggle the mobile menu visibility
+// menuToggle.addEventListener('click', () => {
+//   mobileMenu.classList.toggle('hidden');
+// });
+</script>
+<script src="./src/json/header.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+</html>

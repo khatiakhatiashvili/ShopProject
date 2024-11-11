@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./src/styles/style.css" />
+</head>
+<body>
+   <!-- Include Header -->
+   <div id="header-container"></div>
+ 
+<section class="h-[316px] w-full">
+        <div class=" flex  flex-col items-center m-auto pt-[70px] text-center bg-cover bg-center bg-[url('./src/img/Shop/Rectangle.svg')] h-full w-full ">    
+            <div class="flex  flex-col items-center">  
+                <img class="h-[78px] w-auto "  src="./src/img/Common/logo.svg" alt="logo">
+                <p class="text-[48px] font-bold text-[#000000]">Contact</p>
+
+            </div>
+         <div class="flex items-center gap-x-2">  
+          <a href="index.html"> <p class="text-[16px] font-medium text-[#000000]">Home</p></a> 
+            <img class="h-[20px] w-auto" src="./src/img/Shop/dashicon.svg" alt="dashicon">        
+            <p class="text-[16px] text-[#000000]">Contact</p>
+        </div>
+    </div>
+  </section>
+  <section class=" mb-[20px] bg-[#FFFFFF]">
+    <div class="max-w-7xl flex  flex-col items-center m-auto   border-b-2 border-[#9F9F9F]  pb-[50px]">
+            <div class="flex  flex-col items-center mt-[40px] m-auto">
+                <h2 class="text-[36px] font-semibold text-[#000000]">Get In Touch With Us</h2>
+                <p class="text-[16px] font-regular text-[#9F9F9F] w-full mt-3">For More Information About Our Product & Services. Please Feel Free To Drop Us An Email.
+                    Our Staff Always Be There To Help You Out. Do Not Hesitate!</p>
+            </div>
+        <div class="flex justify-between pt-[10px] flex-wrap text-center gap-x-[320px]">      
+            <div class=" flex flex-col  gap-y-[70px] mt-[80px] items-start m-auto">      
+                <div class="flex flex-col gap-y-1 mt-4 ">
+                    <div class="flex gap-x-3">
+                        <img src="./src/img/Contact/location.svg" class=" w-auto" alt="Group">        
+                        <p class="text-[24px] font-medium text-[#000000]">Address</p>
+                </div>
+                    <p class="text-[16px] font-regular text-[#000000]">236 5th SE Avenue, New York NY10000, United States</p>
+                </div>
+                <div class="flex flex-col gap-y-1 mt-4 ">
+                    <div class="flex gap-x-3">
+                        <img src="./src/img/Contact/phone.svg" class=" w-auto" alt="Group">        
+                        <p class="text-[24px] font-medium text-[#000000]">Phone</p>
+                </div>
+                    <p class="text-[16px] font-regular text-[#000000]">Monday-Friday: 9:00 - 22:00 </p>
+                        
+                </div>
+                <div class="flex flex-col gap-y-1 mt-4 ">
+                    <div class="flex gap-x-3">
+                        <img src="./src/img/Contact/clock.svg" class=" w-auto" alt="Group">        
+                        <p class="text-[24px] font-medium text-[#000000]">Working Time</p>
+                </div>
+                    <p class="text-[16px] font-regular text-[#000000]">236 5th SE Avenue, New York NY10000, United States</p>
+                </div>
+            </div>
+            <div class=" flex flex-col  gap-x-1 mt-[40px]  m-auto">         
+                    <form action="" class="flex flex-col gap-y-5 mt-6 ">
+                        <div class="w-[423px] flex flex-col gap-y-3 items-start">
+                            <label for="fname" class="text-[16px] font-medium text-[#000000]">Your name</label>
+                            <input type="text" id="fname" name="fname" value="" class="border-[1px] border-[#9F9F9F] h-[64px] w-full rounded-[10px] items-center p-3">
+                        </div>
+                        <div class="w-[423px] flex flex-col gap-y-3 items-start">
+                            <label for="fpass" class="text-[16px] font-medium text-[#000000]">Email address</label>
+                            <input type="text" id="fpass" name="fpass" value="" class="border-[1px] border-[#9F9F9F] h-[64px] w-full rounded-[10px] items-center p-3">
+                        </div>      
+                        <div class="w-[423px] flex flex-col gap-y-3 items-start">
+                            <label for="fpass" class="text-[16px] font-medium text-[#000000]">Subject </label>
+                            <input type="text" id="fpass" name="fpass" value="" class="border-[1px] border-[#9F9F9F] h-[64px] w-full rounded-[10px] items-center p-3">
+                        </div>    
+                        <div class="w-[423px] flex flex-col gap-y-3 items-start">
+                            <label for="fpass" class="text-[16px] font-medium text-[#000000]">Message </label>
+                            <input type="text" id="fpass" name="fpass" value="" class="border-[1px] border-[#9F9F9F] h-[64px] w-full rounded-[10px] items-center p-3">
+                        </div>           
+                        <div class="w-[60%] flex  items-center mt-4">
+                            <input type="submit" value="Submit" class="border-[1px]  border-[#9F9F9F] h-[64px] w-full rounded-[15px] items-center p-3">                   
+                        </div>   
+                                        
+                    </form>       
+            </div>
+        </div> 
+    </div>  
+</section>
+
+
+<!-- Include Footer -->
+<div id="footer-container"></div>
+</body>
+<script>
+  // Function to load HTML content dynamically
+   function loadHTML(elementId, url) {
+      fetch(url)
+        .then(response => response.text())
+        .then(html => {
+          document.getElementById(elementId).innerHTML = html;
+        })
+        .catch(error => {
+          console.error('Error loading the HTML file:', error);
+        });
+    }
+    // Load  footer  
+     loadHTML('footer-container', 'footer.html');
+</script>
+
+<script src="./src/json/header.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+</html>

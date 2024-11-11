@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./src/styles/style.css" />
+</head>
+<body> 
+   <!-- Include Header -->
+   <div id="header-container"></div>
+  
+   
+<section class="h-screen bg-[#FBEBB5]">
+  <div class="max-w-7xl flex flex-col lg:flex-row items-center justify-between m-auto h-full"> 
+    <div class="text-center lg:text-left">
+      <h1 class="md:text-[20px] sm:text-[18px] lg:text-[64px] font-medium text-[#000000]">
+        Rocket Single Seater
+      </h1>
+      <a href="shop.html" class="shop-link">
+        <p class="md:text-[16px] sm:text-[14px] lg:text-[24px] font-medium text-[#000000] border-b-2 border-black pb-1 inline-block shop-link ">Shop Now</p>
+      </a>
+    </div>   
+    <div class="mt-8 lg:mt-0 w-full lg:w-1/2 sm:w-[500px] sm:h-[500px] sm:mt-0 image-container">   
+      <img class="lg:h-full lg:w-full object-cover sm:w-[500px] sm:h-[500px] rocket-image" src="./src/img/Home/Rocketsingleseater.svg" alt="Rocketsingleseater">
+    </div>
+  </div>
+</section>
+
+<section class="bg-[#D9D9D9] pb-14">
+  <div class="max-w-7xl flex flex-col lg:flex-row justify-around m-auto pt-[70px]">
+    <!-- Side Table -->
+    <div class="w-full sm:w-[562px] lg:w-[562px] mb-8 lg:mb-0 image-container">   
+      <img src="./src/img/Home/Granitesquaresidetable.svg" alt="Side Table" class="w-full h-auto sm:h-[344px] md:h-[400px] lg:h-[344px] xl:h-[400px] object-contain filter-image">
+      <div class="text-center">
+        <p class="lg:text-[36px] md:text-[24px] sm:text-[20px] font-bold text-[#000000]">Side Table</p>
+        <a href="singleProduct.html">
+          <p class="lg:text-[24px] md:text-[16px] sm:text-[12px] font-medium text-[#000000] border-b-2 border-black pb-1 inline-block">View More</p>
+        </a>
+      </div>
+    </div>
+
+    <!-- Sofa Three Seater -->
+    <div class="w-full sm:w-[562px] lg:w-[562px] image-container">
+      <img src="./src/img/Home/sofathreeseater.svg" alt="Sofa Three Seater" class="w-full h-auto sm:h-[344px] md:h-[400px] lg:h-[344px] xl:h-[400px] object-contain filter-image">
+      <div class="text-center">
+        <p class="lg:text-[36px] md:text-[24px] sm:text-[20px] font-bold text-[#000000]">Sofa Three Seater</p>
+        <a href="singleProduct.html">
+          <p class="lg:text-[24px] md:text-[16px] sm:text-[12px] font-medium text-[#000000] border-b-2 border-black pb-1 inline-block">View More</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Shop Data -->
+<section class="bg-[#FFFFFF] pb-10">
+  <div class="max-w-7xl flex flex-col items-center m-auto pt-[70px]">
+    <div class="flex flex-col items-center text-center px-4">
+      <h2 class="lg:text-[36px] sm:text-[18px]  md:text-[24px]  font-bold text-[#000000] sm:text-[40px] md:text-[48px]">
+        Top Picks For You
+      </h2>
+      <p class=" md:text-[14px] sm:text-[12px] lg:text-[16px] font-medium text-[#000000] sm:text-[18px] md:text-[20px]">
+        Find a bright ideal to suit your taste with our great selection of suspension, floor and table lights.
+      </p>
+    </div> 
+  <!-- Render Shop Data From Js-->
+    <div class="flex flex-wrap justify-center gap-8 pt-[90px]" id="shop_list"></div>
+    <div class="mt-[78px]">
+      <a href="shop.html">
+        <p class="md:text-[18px] sm:text-[14px] lg:text-[20px]  font-medium text-[#000000] border-b-2 border-black pb-1 inline-block">
+          View More
+        </p>
+      </a>
+    </div>
+  </div>
+</section>  
+
+  <!-- New Arrivals Data -->
+<section class=" bg-[#ffe6cc] pb-10">
+  <div class="max-w-7xl flex flex-col md:flex-row place-content-center md:place-content-around m-auto items-center h-full px-4">
+    <div class="w-full md:w-1/2 h-full mb-6 md:mb-0">
+      <img class="h-full w-full object-cover" src="./src/img/Home/sofa.svg" alt="sofa">
+    </div>    
+    <div class="flex flex-col items-center text-center md:items-start md:text-left">
+      <p class=" lg:text-[24px] md:text-[16px] sm:text-[12px] font-medium text-[#000000]">New Arrivals</p>
+      <p class="lg:text-[32px] md:text-[24px] sm:text-[16px]  font-bold font-medium text-[#000000] mt-4">
+        Asgaard sofa
+      </p>
+      <a href="cart.html">
+        <button class="lg:text-[20px]  md:text-[16px] sm:text-[12px] font-medium text-[#000000] bg-gradient-to-r from-[#F1DFD5] to-[#F8E1A1]  border-2 border-black pt-[16px] pb-[16px] pl-[40px] pr-[40px] mt-[20px] md:mt-[30px] hover:from-[#F8E1A1] hover:to-[#F1DFD5] transition duration-300">
+          Order Now
+        </button>
+      </a> 
+    </div>      
+  </div>
+</section>
+
+
+  <!-- Blog Section -->
+<section class="mb-[60px] bg-[#FFFFFF]">
+  <div class="max-w-7xl flex flex-col items-center m-auto pt-[70px] px-4"> 
+    <div class="flex flex-col items-center text-center">
+      <h2 class=" lg:text-[36px] md:text-[32px] sm:text-[24px]  font-bold text-[#000000]">Our Blogs</h2>
+      <p class="lg:text-[16px] md:text-[14px] sm:text-[12px]  font-medium text-[#000000]">Find a bright idea to suit your taste with our great selection</p>
+    </div>  
+  <!-- Render Blog Data From Js -->
+    <div class="xl:flex xl:place-content-between lg:flex lg:place-content-between md:flex-row place-content-center md:place-content-between pt-[90px] gap-y-8 md:gap-x-8 
+    flex-wrap sm:flex sm:flex-col" id="blog_list">     
+    </div>    
+    <div class="mt-[70px]">
+      <a href="blog.html"><p class="lg:text-[20px] md:text-[16px] sm:text-[12px] font-medium text-[#000000] border-b-2 border-black pb-1 inline-block">View All Post</p></a>
+    </div>
+  </div>
+</section>
+
+  <!-- Instagram Section -->
+<section class="h-[442px]">
+  <div class="flex flex-col items-center justify-center h-full text-center  bg-cover bg-center bg-[url('./src/img/Home/Rectangle17.svg')]">
+    <div class="flex flex-col items-center space-y-4">
+      <h2 class="md:text-[36px] sm:text-[24px] lg:text-[60px] font-bold text-[#000000]">Our Instagram</h2>
+      <p class="lg:text-[32px] md:text-[24px] sm:text-[16px]  font-regular text-[#000000]">Follow our store on Instagram</p>
+    </div>  
+      <button class="lg:text-[20px] md:text-[18px] sm:text-[14px] bg-gradient-to-r from-[#F1DFD5] to-[#F8E1A1] 
+          shadow-lg shadow-indigo-500/50 font-regular text-[#000000] rounded-[50px] border-1 pt-[12px] pb-[12px] 
+          pl-[60px] pr-[60px] mt-[30px] hover:from-[#F8E1A1] hover:to-[#F1DFD5] transition duration-300">
+        Follow Us
+    </button> 
+  </div>
+</section>
+
+
+  <!-- Include Footer -->
+  <div id="footer-container"></div>
+</body>
+<script>
+  // Function to load HTML content dynamically
+   function loadHTML(elementId, url) {
+      fetch(url)
+        .then(response => response.text())
+        .then(html => {
+          document.getElementById(elementId).innerHTML = html;
+        })
+        .catch(error => {
+          console.error('Error loading the HTML file:', error);
+        });
+    }
+    // Load  footer  
+     loadHTML('footer-container', 'footer.html');
+</script>
+<script src="./src/json/index.js"></script>
+<script src="./src/json/header.js"></script>
+<script src="./src/json/freedelivery.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+</html>
