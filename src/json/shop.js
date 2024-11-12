@@ -1,9 +1,9 @@
-    const shopItems = [
+    var shopItems = [
         {
             id:1,
             imageSrc: './src/img/Shop/Maskgroup11.svg',
             altText: 'Maskgroup11',
-            title: 'Trenton modular sofa_3',
+            title: 'Trenton modular Table sofa_3',
             price: 70.20     
         },
         {
@@ -24,14 +24,14 @@
             id:4,
             imageSrc: './src/img/Shop/Maskgroup14.svg',
             altText: 'Maskgroup14',
-            title: 'Plain console with teak mirror',
+            title: 'Plain console with table teak mirror',
             price: 50.00
         },
         {
             id:5,
             imageSrc: './src/img/Shop/Maskgroup21.svg',
             altText: 'Maskgroup21',
-            title: 'Plain console with teak mirror',
+            title: 'Plain console table with teak mirror',
             price: 'Rs. 25,000.00'
         },
         {
@@ -45,7 +45,7 @@
             id:7,
             imageSrc: './src/img/Shop/Maskgroup23.svg',
             altText: 'Maskgroup23',
-            title: 'Plain console with teak mirror',
+            title: 'Plain console sofa with teak mirror',
             price: 550.90
         },
         {
@@ -66,7 +66,7 @@
             id:10,
             imageSrc: './src/img/Shop/Maskgroup32.svg',
             altText: 'Maskgroup32',
-            title: 'Plain console with teak mirror',
+            title: 'Plain console with table teak mirror',
             price: 50.20
         },
         {
@@ -87,40 +87,49 @@
             id:13,
             imageSrc: './src/img/Shop/Maskgroup41.svg',
             altText: 'Maskgroup41',
-            title: 'Plain console with teak mirror',
+            title: 'Plain console with sofa teak mirror',
             price: 50.20
         },
         {
             id:14,
             imageSrc: './src/img/Shop/Maskgroup42.svg',
             altText: 'Maskgroup42',
-            title: 'Plain console with teak mirror',
+            title: 'Plain console with table teak mirror',
             price: 50.20
         },
         {
             id:15,
             imageSrc: './src/img/Shop/Maskgroup43.svg',
             altText: 'Maskgroup43',
-            title: 'Plain console with teak mirror',
+            title: 'Plain console sofa with teak mirror',
             price:50.20
         },
         {
             id:16,
             imageSrc: './src/img/Shop/Maskgroup24.svg',
             altText: 'Maskgroup24',
-            title: 'Plain console with teak mirror',
+            title: 'Plain console with teak sofa mirror',
             price: 50.20
         }
     ];
     let cartItems = [];
-    const productPage = document.getElementById("main");
-    shopItems.forEach((shopItem) => {
+    const searchParams = new URLSearchParams(window.location.search);
+    const shopItemTitle = searchParams.get("title");
+  
+    if (shopItemTitle) 
+            shopItems = shopItems.filter((shopItem) => shopItem.title.includes(shopItemTitle));
+      
+      
+
+        const renderproductItems = async () => {
+        const productPage = document.getElementById("main");
+        
+        shopItems.forEach((shopItem) => {
         const { id, imageSrc, altText, title, price} = shopItem;
         const singleProduct = document.createElement("div");
         singleProduct.classList.add("product_card");
     
-        singleProduct.innerHTML = `          
-        
+        singleProduct.innerHTML = `           
        <div class="flex place-content-around pt-[90px] flex-wrap text-center max-w-7xl ">    
             <div class="w-[394px] text-center flex flex-col flex-wrap t items-center image-container">
                 <img src="${imageSrc}" class="h-48 w-auto mb-4 single_product top-image" alt="${altText}">
@@ -144,18 +153,12 @@
 
         singleProduct.querySelector(".single_product").addEventListener("click", () => {
             window.location.href = `singleProduct.html?id=${id}`;
-          });       
-
-        // singleProduct.querySelector(".buy_now").addEventListener("click", () => {
-        //   navigaateToProductPage(id);
-        // });
-    //     <button class="buy_now flex-none w-[60%] h-14 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold tracking-wider hover:from-blue-500 hover:to-purple-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300">
-    //     Buy Now
-    // </button>  
+          });             
         productPage.appendChild(singleProduct);
-      }); 
-   
-// });
+      });
+    };
+    renderproductItems(); 
+
 
 const addToCart = (id) => {
     const shopItem = shopItems.find((shopItem) => shopItem.id === id);
@@ -183,3 +186,4 @@ const addToCart = (id) => {
   cartButton.addEventListener("click", navigaateToProductPage);
 
 
+ 

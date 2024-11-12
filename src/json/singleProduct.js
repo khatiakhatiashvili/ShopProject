@@ -272,12 +272,11 @@ const { id, imageSrc, altText, title, price,
     imageLittleSrc1,altLittleText1,imageLittleSrc2,altLittleText2,
     imageLittleSrc3,altLittleText3,imageLittleSrc4,altLittleText4, description
  } = singleProduct;
+
 const singleProductDiv = document.getElementById("singleProduct");
 
 const productSingle= document.createElement("div");
 productSingle.classList.add("product-single");
-
-
 
 productSingle.innerHTML = `
 <div class="flex place-content-around gap-x-10 >
@@ -361,12 +360,10 @@ productSingle.innerHTML = `
 productSingle.querySelector(".add_to_cart").addEventListener("click", () => {
 addToCart(id);
 });
-
-
-
 // Append the product card to the container
 singleProductDiv.appendChild(productSingle);
-} else {
+}
+else {
 console.log(`shopItem with ID ${shopItemID} not found.`);
 }
 } else {

@@ -27,9 +27,13 @@ const shopItems = [
         title: 'Plain console with teak mirror',
         price: 500.00
     } 
-  ];
+  ];  
   
-  const shopPage = document.getElementById("shop_list");
+  // const shopPage = document.getElementById("shop_list");
+  const renderShopItems = async () => {
+    const shopPage = document.getElementById("shop_list");
+
+
   shopItems.forEach((shopItem) => {
     const { id,imageSrc, altText, title, price} = shopItem;
     const singleProduct = document.createElement("div");
@@ -46,7 +50,10 @@ const shopItems = [
     });
   shopPage.appendChild(singleProduct);
   });
-  
+}; 
+renderShopItems();
+
+
   const blogs = [
       {
           id:1,
@@ -74,11 +81,14 @@ const shopItems = [
       }
     ]; 
   
-    const blogPage = document.getElementById("blog_list");
+    // const blogPage = document.getElementById("blog_list");
+    const renderBlogItems = async () => {
+      const blogPage = document.getElementById("blog_list");
+
     blogs.forEach((blog) => {
       const { title, image,altText, date, time} = blog;
       const singleBlog = document.createElement("div");
-      singleBlog.classList.add("product_shop");
+      singleBlog.classList.add("blog_shop");
      singleBlog.innerHTML = `        
      <div class="w-full md:w-[394px] text-center flex flex-col items-center gap-y-2 image-container">
     <img src="${image}" class="w-auto mb-4 blog-image"  alt="${altText}">
@@ -93,6 +103,37 @@ const shopItems = [
   </div> `;
   
      blogPage.appendChild(singleBlog);
-    }); 
-    
-  
+    });
+  };
+    renderBlogItems();
+ 
+
+
+    const furniturePage = document.getElementById("furniture_list");
+    const singleFurniture = document.createElement("div");    
+    singleFurniture.innerHTML = `     
+      <div class="flex">      
+        <div class="w-full sm:w-[562px] lg:w-[562px] mb-8 lg:mb-0 image-container">   
+            <img src="./src/img/Home/Granitesquaresidetable.svg" alt="Granitesquaresidetable" class="w-full h-auto sm:h-[344px] md:h-[400px] lg:h-[344px] xl:h-[400px] object-contain filter-image">
+            <div class="text-center">
+              <p class="lg:text-[36px] md:text-[24px] sm:text-[20px] font-bold text-[#000000]">Side Table</p>         
+                <p class="lg:text-[24px] md:text-[16px] sm:text-[12px] font-medium text-[#000000] border-b-2 border-black pb-1 inline-block table_product"  >View More</p>     
+            </div>
+          </div> 
+          <div class="w-full sm:w-[562px] lg:w-[562px] mb-8 lg:mb-0 image-container">   
+            <img src="./src/img/Home/sofathreeseater.svg" alt="sofathreeseater" class="w-full h-auto sm:h-[344px] md:h-[400px] lg:h-[344px] xl:h-[400px] object-contain filter-image">
+            <div class="text-center">
+              <p class="lg:text-[36px] md:text-[24px] sm:text-[20px] font-bold text-[#000000]">Sofa Three Seater</p>         
+                <p class="lg:text-[24px] md:text-[16px] sm:text-[12px] font-medium text-[#000000] border-b-2 border-black pb-1 inline-block sofa_product"  >View More</p>      
+            </div>
+          </div> 
+      </div> `;
+  singleFurniture.querySelector(".table_product").addEventListener("click", () => {
+    window.location.href = `shop.html?title=${"table"}`;
+  });   
+  singleFurniture.querySelector(".sofa_product").addEventListener("click", () => {
+    window.location.href = `shop.html?title=${"sofa"}`;
+  });  
+    furniturePage.appendChild(singleFurniture);
+
+

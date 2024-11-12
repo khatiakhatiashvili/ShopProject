@@ -125,6 +125,9 @@ const products = [
   );
   console.log(cartProducts);
   
+  const renderproductItems = async () => {
+    // const productPage = document.getElementById("main");
+
   const productPage = document.getElementById("cartProduct");
   
   cartProducts.forEach((product) => {
@@ -152,6 +155,9 @@ singleProduct.innerHTML =`
                         </div>`;
     productPage.appendChild(singleProduct);
   });
+};
+renderproductItems();
+
   
   const finalPrice = document.getElementById("finalPrice");
   let sumPrice = 0;
